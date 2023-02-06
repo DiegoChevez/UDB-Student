@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
 </head>
 
-<h1>Tablas de multiplicar</h1>
+<body class="container">
 
-<form action="Tablas.php" method="post" name="Tablas" id="TablasMulti">
-    <label for="">Ingrese un número del 1 al 10 para mostrarle su respectiva tabla de multiplicar</label>
-    <br>
-    <input type="number" placeholder="Ingrese un valor de entre 1 y 10" name="datosTabla" min="1" max="10" required>
-    <button  type="submit" value="ValorTablasbtn" name="calcular">Ingresar</button>
-</form>
+    <div class="row">
+        <br>
+        <form class="col s12" action="Tablas.php" method="post" name="TablasForm">
 
+        <h1 style="text-align: center;">Tablas de multiplicar</h1>
+          <div class="row">
+            <div class="input-field col s6 offset-s3">
+              <input id="last_name" type="number" class="validate" name="datosTabla" min="0" max="10" required>
+              <label for="last_name" style="text-align: center;">Número de entre 1 al 10 para imprimir su respectiva tabla de multiplicar</label>
+            </div>
+          </div>
 
+          <div class="container center-align">
+            <button class="btn waves-effect waves-light .center-align" type="submit" name="action">Enviar</button>
+            </div>
+
+        </form>
+    </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
+
+
 </html>

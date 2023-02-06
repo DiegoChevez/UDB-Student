@@ -1,57 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
 </head>
-<body>
+<body class="container">
     
-<form action="Notas.php" method="post" name="notas">
+    <div class="row">
+        <br>
+        <form class="col s12" action="Notas.php" method="post" name="NotasForm">
+            <h1 style="text-align: center;">Sistema de ingreso de notas de estudiantes</h1>
 
-<h1>Sistema de ingreso de notas de estudiantes</h1>
-<br>
-<label for="">Ingrese su nombre</label>
-<input type="text" name="nombre1" placeholder="Ingrese su nombre" required>
-<br>
-<label for="">Nota tarea (20%)</label>
-<input type="number" name="tarea1" placeholder="Ingrese la nota de su tarea" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota investigación(30%)</label>
-<input type="number" name="investigacion1" placeholder="Ingrese la nota de su investigación" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota de parcial (50%)</label>
-<input type="number" name="parcial1" placeholder="Ingrese su nota del parcial" min="0" max="10" step=".01" required>
-<br>
-<hr>
-<label for="">Ingrese su nombre</label>
-<input type="text" name="nombre2" placeholder="Ingrese su nombre" required>
-<br>
-<label for="">Nota tarea (20%)</label>
-<input type="number" name="tarea2" placeholder="Ingrese la nota de su tarea" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota investigación(30%)</label>
-<input type="number" name="investigacion2" placeholder="Ingrese la nota de su investigación" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota de parcial (50%)</label>
-<input type="number" name="parcial2" placeholder="Ingrese su nota del parcial" min="0" max="10" step=".01" required>
-<br>
-<hr>
-<label for="">Ingrese su nombre</label>
-<input type="text" name="nombre3" placeholder="Ingrese su nombre" required>
-<br>
-<label for="">Nota tarea (20%)</label>
-<input type="number" name="tarea3" placeholder="Ingrese la nota de su tarea" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota investigación(30%)</label>
-<input type="number" name="investigacion3" placeholder="Ingrese la nota de su investigación" min="0" max="10" step=".01" required>
-<br>
-<label for="">Nota de parcial (50%)</label>
-<input type="number" name="parcial3" placeholder="Ingrese su nota del parcial" min="0" max="10" step=".01" required>
-<br>
-<button type="submit" value="Notasbtn">Enviar</button>
-</form>
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="text" class="validate" name="nombre1" required>
+              <label for="last_name">Nombre alumno 1</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="tarea1" required min="0" max="10" step=".01">
+              <label for="last_name">Nota tarea (20%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="investigacion1" required min="0" max="10" step=".01">
+              <label for="last_name">Nota investigación (30%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="parcial1" required min="0" max="10" step=".01">
+              <label for="last_name">Nota parcial (50%)</label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="text" class="validate" name="nombre2" required>
+              <label for="last_name">Nombre alumno 2</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="tarea2" required min="0" max="10" step=".01">
+              <label for="last_name">Nota tarea (20%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="investigacion2" required min="0" max="10" step=".01">
+              <label for="last_name">Nota investigación (30%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="parcial2" required min="0" max="10" step=".01">
+              <label for="last_name">Nota parcial (50%)</label>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="text" class="validate" name="nombre3" required>
+              <label for="last_name">Nombre alumno 3</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="tarea3" required min="0" max="10" step=".01">
+              <label for="last_name">Nota tarea (20%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="investigacion3" required min="0" max="10" step=".01">
+              <label for="last_name">Nota investigación (30%)</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8 offset-s2">
+              <input id="last_name" type="number" class="validate" name="parcial3" required min="0" max="10" step=".01">
+              <label for="last_name">Nota parcial (50%)</label>
+            </div>
+          </div>
+
+          <div class="container center-align">
+          <button class="btn waves-effect waves-light .center-align" type="submit" name="action">Enviar</button>
+          </div>
+
+          </div>
+        </form>
+      </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
 </html>
