@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body         {
+    background: rgb(200,220,250) url(../img/wavepattern.png) repeat-y;
+    margin: 0 2em 2em 6em;
+    font-size: 16px;
+}
+
+header h1 {
+    color: #fff;
+    font: Bold 32px "Playfair Display", Times, "Times New Roman", serif;
+    text-shadow: 0 0 5px #fff, 
+                 0 0 10px #fff, 
+                 0 0 15px #fff, 
+                 0 0 20px #496dcf, 
+                 0 0 30px #496dcf, 
+                 0 0 40px #496dcf, 
+                 0 0 50px #496dcf, 
+                 0 0 75px #496dcf;
+    left: 16%;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 24%;
+}
+
+#contenedor   {
+    margin: 0 auto;
+    width: 86%;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+p, ul li     {
+    color: rgb(20,20,60);
+    font: normal 1em Georgia,Perpetua,serif,helvetica;
+	line-height: 1.5em;
+}
+
+li {
+	background-image: url(../img/triangle-bullet.gif);
+	background-position: left 35%;
+	background-repeat: no-repeat;
+	list-style: none;
+	padding-left: 32px;
+}
+
+h3 {
+    font: bold 1.2em "Bodoni MT Black","Bookman Old Style",Helvetica,serif;
+    color: rgb(130,30,10);
+}
