@@ -80,6 +80,7 @@ foreach ($notas as $alumnos){
             echo "<td>", $key ,"</td>";
             echo "<td>", $value ,"</td>";
             echo "</tr>";
+            echo "<br>";
         }
 }
 
