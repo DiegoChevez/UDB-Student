@@ -1,0 +1,19 @@
+-Class Main
+	-Menu JOptionPain - Principal
+	-Referencias el Package
+	-Instancias los metodos
+
+Mediateca
+-Class Material
+	-ConstructorPrincial
+		*CodigoID
+		*Titulo
+		*
+-Class MaterialEscrito
+	-Herencias
+	-Metodos
+	--Menu JOptionPain
+-Class MaterialVisual
+	-Herencias
+	-Metodos
+	--Menu JOptionPain
