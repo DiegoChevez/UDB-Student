@@ -1,0 +1,21 @@
+<?xml version="1.1"?>
+<Catalogo>
+    <libros>
+        <libro id="CDA00001">
+            <CodigoID>DVD00001</CodigoID>
+            <Titulo> Titanes del pacifico </Titulo>
+            <Director>Guillermo del Toro</Director>
+            <Duracion> 132 minutos </Duracion>
+            <Genero> Ciencia, Ficción, Acción, Aventuras </Genero>
+        </libro>
+    </libros>
+    <libros>
+        <libro id="DVD00002">
+            <CodigoID>DVD00002</CodigoID>
+            <Titulo> Interestelar  </Titulo>
+            <Director> Christopher Nolan </Director>
+            <Duracion> 169 minutos </Duracion>
+            <Genero> Ciencia ficción, Ciencia ficción apocalíptica, Drama, Distopía, Space opera, Épica </Genero>
+        </libro>
+    </libros>
+</Catalogo>

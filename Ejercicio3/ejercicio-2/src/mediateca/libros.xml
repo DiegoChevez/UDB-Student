@@ -1,0 +1,60 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<Catalogo>
+
+    <libro id="LIB00001">
+
+        <CodigoID>LIB00001</CodigoID>
+
+        <Titulo>Don Quijote de la Mancha</Titulo>
+
+        <Autor>Miguel de Cervantes</Autor>
+
+        <NumPage>304 págs</NumPage>
+
+        <Editorial>Francisco de Robles</Editorial>
+
+        <FechaPublicacion>1605</FechaPublicacion>
+
+        <UnidadesDisp>38</UnidadesDisp>
+
+    </libro>
+
+    <libro id="LIB00002">
+
+        <CodigoID>LIB00002</CodigoID>
+
+        <Titulo>El principito</Titulo>
+
+        <Autor>Antoine de Saint-Exupéry</Autor>
+
+        <NumPage>120 págs</NumPage>
+
+        <Editorial>Francisco de Robles</Editorial>
+
+        <FechaPublicacion>6 de abril de 1943</FechaPublicacion>
+
+        <UnidadesDisp>8</UnidadesDisp>
+
+    </libro>
+
+    <libro>
+
+        <CodigoID>LIB2020202</CodigoID>
+
+        <Titulo>SI</Titulo>
+
+        <Autor>Bruno</Autor>
+
+        <NumPage>10</NumPage>
+
+        <Editorial>Montes</Editorial>
+
+        <FechaPublicacion>2021</FechaPublicacion>
+
+        <UnidadesDisp>4</UnidadesDisp>
+
+    </libro>
+
+
+
+</Catalogo>
