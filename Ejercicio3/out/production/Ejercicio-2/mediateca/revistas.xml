@@ -1,20 +1,40 @@
-<?xml version="1.1"?>
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <Catalogo>
+    .
     <revista id="REV00001">
+                
         <CodigoID>REV00001</CodigoID>
+                
         <Titulo>GQ</Titulo>
+                
         <Editorial>Condé Nast Publications</Editorial>
+                
         <Periodicidad>Mensual</Periodicidad>
+                
         <FechaPublicacion>1957</FechaPublicacion>
+                
         <UnidadesDisp>37</UnidadesDisp>
+            
     </revista>
-
+        
     <revista id="REV00002">
+                
         <CodigoID>REV00002</CodigoID>
+                
         <Titulo>Forbes</Titulo>
+                
         <Editorial>Forbes Editorial</Editorial>
+                
         <Periodicidad>Bisemanal</Periodicidad>
+                
         <FechaPublicacion>1917</FechaPublicacion>
+                
         <UnidadesDisp>20</UnidadesDisp>
+            
     </revista>
+        
+        
+    
+
+
 </Catalogo>

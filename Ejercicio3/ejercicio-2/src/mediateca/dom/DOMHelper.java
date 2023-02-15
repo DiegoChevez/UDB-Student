@@ -1,7 +1,6 @@
 package mediateca.dom;
 
 import javax.xml.parsers.*;
-import java.io.StringWriter;
 import org.w3c.dom.*;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.*;
@@ -9,7 +8,7 @@ import javax.xml.transform.stream.*;
 
 public class DOMHelper {
 	public static Document getDocument(String path_to_file) {
-		Document d = null;
+		Document d;
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
@@ -18,23 +17,6 @@ public class DOMHelper {
 			d = null;
 		}
 		return d;
-	}
-
-	public static String getXMLContent(Document d){
-		String result = "";
-		try {
-			TransformerFactory tff = TransformerFactory.newInstance();
-			Transformer tf = tff.newTransformer();
-			tf.setOutputProperty(OutputKeys.INDENT, "yes");
-			StringWriter sw = new StringWriter();
-			StreamResult sr = new StreamResult(sw);
-			DOMSource source = new DOMSource(d);
-			tf.transform(source,sr);
-			result = sw.toString();
-		}catch (Exception ex){
-			result = "";
-		}
-		return result;
 	}
 
 	public static void saveXMLContent(Document d, String path_to_file){

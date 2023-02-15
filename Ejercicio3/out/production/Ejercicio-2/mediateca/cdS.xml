@@ -1,25 +1,21 @@
-<?xml version="1.1"?>
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <Catalogo>
-    <libros>
-        <libro id="CDA00001">
-            <CodigoID>CDA00001</CodigoID>
-            <Titulo> Starboy </Titulo>
-            <Artista> The weekend </Artista>
-            <Genero> Pop, RYB contemporáneo, Trap </Genero>
-            <Duracion> 68:40 </Duracion>
-            <NumeroCanciones> 18 </NumeroCanciones>
-            <UnidadesDisp> 50 </UnidadesDisp>
-        </libro>
-    </libros>
-    <libros>
-        <libro id="CDA00002">
-            <CodigoID>CDA00002</CodigoID>
-            <Titulo> Meteora </Titulo>
-            <Artista> Linkin Park </Artista>
-            <Genero> Nu metal, rap metal, rap rock, metal alternativo, rock alternativo</Genero>
-            <Duracion> 36:41 </Duracion>
-            <NumeroCanciones> 13 </NumeroCanciones>
-            <UnidadesDisp> 69 </UnidadesDisp>
-        </libro>
-    </libros>
+    <cd id="CDA00001">
+        <CodigoID>CDA00001</CodigoID>
+        <Titulo> Starboy </Titulo>
+        <Artista> The weekend </Artista>
+        <Genero> Pop, RYB contemporáneo, Trap </Genero>
+        <Duracion> 68:40 </Duracion>
+        <NumeroCanciones> 18 </NumeroCanciones>
+        <UnidadesDisp> 50 </UnidadesDisp>
+    </cd>
+    <cd id="CDA00002">
+        <CodigoID>CDA00002</CodigoID>
+        <Titulo> Meteora </Titulo>
+        <Artista> Linkin Park </Artista>
+        <Genero> Nu metal, rap metal, rap rock, metal alternativo, rock alternativo</Genero>
+        <Duracion> 36:41 </Duracion>
+        <NumeroCanciones> 13 </NumeroCanciones>
+        <UnidadesDisp> 69 </UnidadesDisp>
+    </cd>
 </Catalogo>

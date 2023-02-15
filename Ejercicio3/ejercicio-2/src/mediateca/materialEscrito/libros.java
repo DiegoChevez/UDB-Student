@@ -3,16 +3,8 @@ import mediateca.Main;
 import mediateca.dom.DOMHelper;
 
 
-import org.jdom2.JDOMException;
-import org.jdom2.input.SAXBuilder;
 import org.w3c.dom.*;
-
 import javax.swing.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
 
 
 public class libros extends materialEscrito {
@@ -29,143 +21,222 @@ public class libros extends materialEscrito {
 		AnnoPublicacion = _AnnoPublicacion;
 
 	}
+
 	@Override
 	public void agregarMaterial() {
 		String id = JOptionPane.showInputDialog(null, "Introduce la fecha de registro","ID",
 				JOptionPane.QUESTION_MESSAGE);
-		String titulo = JOptionPane.showInputDialog(null, "Introduce el titulo","Titulo",
-				JOptionPane.QUESTION_MESSAGE);
-		String autor = JOptionPane.showInputDialog(null, "Introduce el autor","Autor",
-				JOptionPane.QUESTION_MESSAGE);
-		String xpage = JOptionPane.showInputDialog(null, "Introduce el Numero de Paginas","Numero de Paginas",
-				JOptionPane.QUESTION_MESSAGE);
-		String editorial = JOptionPane.showInputDialog(null, "Introduce la editorial","Editorial",
-				JOptionPane.QUESTION_MESSAGE);
-		String ffPublicacion = JOptionPane.showInputDialog(null, "Introduce la fecha de publicacion","Fecha de " +
-						"Publicacion",
-				JOptionPane.QUESTION_MESSAGE);
-		String unidades = JOptionPane.showInputDialog(null, "Introduce las unidades a registrar","Unidades Disponibles",
-				JOptionPane.QUESTION_MESSAGE);
+		if(id.isEmpty()){
+			JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+			agregarMaterial();
+		} else{
+			String titulo = JOptionPane.showInputDialog(null, "Introduce el titulo","Titulo",
+					JOptionPane.QUESTION_MESSAGE);
+			if (titulo.isEmpty()){
+				JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+				agregarMaterial();
+			}else{
+				String autor = JOptionPane.showInputDialog(null, "Introduce el autor","Autor",
+						JOptionPane.QUESTION_MESSAGE);
+				if (autor.isEmpty()){
+					JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+					agregarMaterial();
+				}else {
+					String xpage = JOptionPane.showInputDialog(null, "Introduce el Numero de Paginas","Numero de Paginas",
+							JOptionPane.QUESTION_MESSAGE);
+					if(xpage.isEmpty()){
+						JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+						agregarMaterial();
+					}else {
+						String editorial = JOptionPane.showInputDialog(null, "Introduce la editorial","Editorial",
+								JOptionPane.QUESTION_MESSAGE);
+						if(editorial.isEmpty()){
+							JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+							agregarMaterial();
+						}else{
+							String ffPublicacion = JOptionPane.showInputDialog(null, "Introduce la fecha de publicacion","Fecha de " +
+											"Publicacion",
+									JOptionPane.QUESTION_MESSAGE);
+							if(ffPublicacion.isEmpty()){
+								JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+								agregarMaterial();
+							}else {
+								String unidades = JOptionPane.showInputDialog(null, "Introduce las unidades a registrar","Unidades Disponibles",
+										JOptionPane.QUESTION_MESSAGE);
+								if(unidades.isEmpty()){
+									JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+									agregarMaterial();
+								}else{
+									try {
+										Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
+										Element libros = d.getDocumentElement();
+										Element libro = d.createElement("libro");
 
-		try {
-			Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
-			Element libros = d.getDocumentElement();
-			Element libro = d.createElement("libro");
+										Element CodigoID  = d.createElement("CodigoID");
+										CodigoID.appendChild(d.createTextNode("LIB"+id));
+										libro.appendChild(CodigoID);
 
-			Element CodigoID  = d.createElement("CodigoID");
-			CodigoID.appendChild(d.createTextNode("LIB"+id));
-			libro.appendChild(CodigoID);
+										Element Titulo = d.createElement("Titulo");
+										Titulo.appendChild(d.createTextNode(titulo));
+										libro.appendChild(Titulo);
 
-			Element Titulo = d.createElement("Titulo");
-			Titulo.appendChild(d.createTextNode(titulo));
-			libro.appendChild(Titulo);
+										Element Autor = d.createElement("Autor");
+										Autor.appendChild(d.createTextNode(autor));
+										libro.appendChild(Autor);
 
-			Element Autor = d.createElement("Autor");
-			Autor.appendChild(d.createTextNode(autor));
-			libro.appendChild(Autor);
+										Element NumPage = d.createElement("NumPage");
+										NumPage.appendChild(d.createTextNode(xpage));
+										libro.appendChild(NumPage);
 
-			Element NumPage = d.createElement("NumPage");
-			NumPage.appendChild(d.createTextNode(xpage));
-			libro.appendChild(NumPage);
+										Element Editorial = d.createElement("Editorial");
+										Editorial.appendChild(d.createTextNode(editorial));
+										libro.appendChild(Editorial);
 
-			Element Editorial = d.createElement("Editorial");
-			Editorial.appendChild(d.createTextNode(editorial));
-			libro.appendChild(Editorial);
+										Element FechaPublicacion = d.createElement("FechaPublicacion");
+										FechaPublicacion.appendChild(d.createTextNode(ffPublicacion));
+										libro.appendChild(FechaPublicacion);
 
-			Element FechaPublicacion = d.createElement("FechaPublicacion");
-			FechaPublicacion.appendChild(d.createTextNode(ffPublicacion));
-			libro.appendChild(FechaPublicacion);
+										Element UnidadesDisp = d.createElement("UnidadesDisp");
+										UnidadesDisp.appendChild(d.createTextNode(unidades));
+										libro.appendChild(UnidadesDisp);
 
-			Element UnidadesDisp = d.createElement("UnidadesDisp");
-			UnidadesDisp.appendChild(d.createTextNode(unidades));
-			libro.appendChild(UnidadesDisp);
+										libros.appendChild(libro);
 
-			libros.appendChild(libro);
+										DOMHelper.saveXMLContent(d, "ejercicio-2/src/mediateca/libros.xml");
 
-			DOMHelper.saveXMLContent(d, "ejercicio-2/src/mediateca/libros.xml");
-
-		}catch (Exception e){
-			System.out.println(e.getMessage());
+										String[] op = {"Agregar Otro", "Salir", "Regresar"};
+										int x = JOptionPane.showOptionDialog(null, "Material Añadido",
+												"Mediateca",
+												JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, op, op[0]);
+										switch (x) {
+											case 0 -> agregarMaterial();
+											case 1 -> System.exit(0);
+											case 2 -> Main.main(null);
+										}
+									}catch (Exception e){
+										System.out.println(e.getMessage());
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-
 	}
 
 	@Override
 	public void modificarMaterial() {
 		String id = JOptionPane.showInputDialog(null, "Introduce el ID del Regitro a Modificar", "Modificar Material",
 				JOptionPane.QUESTION_MESSAGE);
-		try {
-			Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
-			NodeList nl = d.getElementsByTagName("libro");
-			for (int i = 0; i < nl.getLength(); i++) {
-				Element material = (Element) nl.item(i);
-				if (material.getElementsByTagName("CodigoID")
-							.item(0)
-							.getTextContent()
-							.equals(id)) {
+		if(id.isEmpty()){
+			JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+			modificarMaterial();
+		}else{
+			try {
+				Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
+				NodeList nl = d.getElementsByTagName("libro");
+				for (int i = 0; i < nl.getLength(); i++) {
+					Element material = (Element) nl.item(i);
+					if (material.getElementsByTagName("CodigoID")
+								.item(0)
+								.getTextContent()
+								.equals(id)) {
 
-					String N_titulo = JOptionPane.showInputDialog(null, "Introduce el nuevo titulo","Titulo",
-							JOptionPane.QUESTION_MESSAGE);
-					String N_autor = JOptionPane.showInputDialog(null, "Introduce el nuevo autor","Autor",
-							JOptionPane.QUESTION_MESSAGE);
-					String N_xpage = JOptionPane.showInputDialog(null, "Introduce el nuevo Numero de Paginas","Numero" +
-									" de Paginas",
-							JOptionPane.QUESTION_MESSAGE);
-					String N_editorial = JOptionPane.showInputDialog(null, "Introduce la nueva editorial","Editorial",
-							JOptionPane.QUESTION_MESSAGE);
-					String N_ffPublicacion = JOptionPane.showInputDialog(null, "Introduce la nueva fecha de " +
-									"publicacion","Fecha de Publicacion",
-							JOptionPane.QUESTION_MESSAGE);
-					String N_unidades = JOptionPane.showInputDialog(null, "Introduce las  unidades a registrar",
-							"Unidades Disponibles",
-							JOptionPane.QUESTION_MESSAGE);
+						String N_titulo = JOptionPane.showInputDialog(null, "Introduce el nuevo titulo","Titulo",
+								JOptionPane.QUESTION_MESSAGE);
+						if(N_titulo.isEmpty()){
+							JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+							modificarMaterial();
+						}else {
+							String N_autor = JOptionPane.showInputDialog(null, "Introduce el nuevo autor","Autor",
+									JOptionPane.QUESTION_MESSAGE);
+							if(N_autor.isEmpty()){
+								JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+								modificarMaterial();
+							}else{
+								String N_xpage = JOptionPane.showInputDialog(null, "Introduce el nuevo Numero de Paginas","Numero" +
+												" de Paginas",
+										JOptionPane.QUESTION_MESSAGE);
+								if(N_xpage.isEmpty()){
+									JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+									modificarMaterial();
+								}else {
+									String N_editorial = JOptionPane.showInputDialog(null, "Introduce la nueva editorial","Editorial",
+											JOptionPane.QUESTION_MESSAGE);
+									if(N_editorial.isEmpty()){
+										JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+										modificarMaterial();
+									}else {
+										String N_ffPublicacion = JOptionPane.showInputDialog(null, "Introduce la nueva fecha de " +
+														"publicacion","Fecha de Publicacion",
+												JOptionPane.QUESTION_MESSAGE);
+										if(N_ffPublicacion.isEmpty()){
+											JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+											modificarMaterial();
+										}else {
+											String N_unidades = JOptionPane.showInputDialog(null, "Introduce las  unidades a registrar",
+													"Unidades Disponibles",
+													JOptionPane.QUESTION_MESSAGE);
+											if(N_unidades.isEmpty()){
+												JOptionPane.showMessageDialog(null,"NO PUEDEN HABER CAMPOS VACIOS","ERROR",JOptionPane.ERROR_MESSAGE);
+												modificarMaterial();
+											}else {
+												material.getElementsByTagName("Titulo").item(0).setTextContent(N_titulo);
+												material.getElementsByTagName("Autor").item(0).setTextContent(N_autor);
+												material.getElementsByTagName("NumPage").item(0).setTextContent(N_xpage);
+												material.getElementsByTagName("Editorial").item(0).setTextContent(N_editorial);
+												material.getElementsByTagName("FechaPublicacion").item(0).setTextContent(N_ffPublicacion);
+												material.getElementsByTagName("UnidadesDisp").item(0).setTextContent(N_unidades);
 
-					material.getElementsByTagName("Titulo").item(0).setTextContent(N_titulo);
-					material.getElementsByTagName("Autor").item(0).setTextContent(N_autor);
-					material.getElementsByTagName("NumPage").item(0).setTextContent(N_xpage);
-					material.getElementsByTagName("Editorial").item(0).setTextContent(N_editorial);
-					material.getElementsByTagName("FechaPublicacion").item(0).setTextContent(N_ffPublicacion);
-					material.getElementsByTagName("UnidadesDisp").item(0).setTextContent(N_unidades);
-
-					DOMHelper.saveXMLContent(d, "ejercicio-2/src/mediateca/libros.xml");
+												DOMHelper.saveXMLContent(d, "ejercicio-2/src/mediateca/libros.xml");
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
+				String[] op = {"Modificar Otro", "Salir", "Regresar"};
+				int x = JOptionPane.showOptionDialog(null, "Material Modificado",
+						"Mediateca",
+						JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, op, op[0]);
+				switch (x) {
+					case 0 -> modificarMaterial();
+					case 1 -> System.exit(0);
+					case 2 -> Main.main(null);
+				}
+			}catch(Exception e){
+				System.out.println(e.getMessage());
 			}
-		}catch(Exception e){
-			System.out.println(e.getMessage());
 		}
 	}
 
 	@Override
 	public void listarMaterial(){
-		Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
-		NodeList nl = d.getElementsByTagName("libro");
-		for (int i = 0; i < nl.getLength(); i++) {
-			Element material = (Element) nl.item(i);
-			System.out.println("------------------------------------------------------");
-			System.out.println("Codigo Libro: " + material.getElementsByTagName("CodigoID").item(0).getTextContent());
-			System.out.println("------------------------------------------------------");
-			System.out.println("Titulo: " + material.getElementsByTagName("Titulo").item(0).getTextContent());
-			System.out.println("Autor: " + material.getElementsByTagName("Autor").item(0).getTextContent());
-			System.out.println("Numero de Paginas: " + material.getElementsByTagName("NumPage").item(0).getTextContent());
-			System.out.println("Editorial: " + material.getElementsByTagName("Editorial").item(0).getTextContent());
-			System.out.println("Unidades Disponibles: " + material.getElementsByTagName("UnidadesDisp").item(0).getTextContent());
-			System.out.println("------------------------------------------------------\n");
-		}
-	}
-
-	@Override
-	public void borrarMaterial() {
-		String id = JOptionPane.showInputDialog(null, "Introduce el ID del Regitro a Eliminar", "Eliminar Material",
-				JOptionPane.QUESTION_MESSAGE);
 		try {
 			Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
 			NodeList nl = d.getElementsByTagName("libro");
-			for (int i=0; i<nl.getLength();i++){
+			for (int i = 0; i < nl.getLength(); i++) {
 				Element material = (Element) nl.item(i);
-				if(material.getElementsByTagName("CodigoID").item(0).getTextContent().equals(id)){
-					material.getParentNode().removeChild(material);
-				}
-				DOMHelper.saveXMLContent(d,"ejercicio-2/src/mediateca/libros.xml");
+				System.out.println("------------------------------------------------------");
+				System.out.println("Codigo Libro: " + material.getElementsByTagName("CodigoID").item(0).getTextContent());
+				System.out.println("------------------------------------------------------");
+				System.out.println("Titulo: " + material.getElementsByTagName("Titulo").item(0).getTextContent());
+				System.out.println("Autor: " + material.getElementsByTagName("Autor").item(0).getTextContent());
+				System.out.println("Numero de Paginas: " + material.getElementsByTagName("NumPage").item(0).getTextContent());
+				System.out.println("Editorial: " + material.getElementsByTagName("Editorial").item(0).getTextContent());
+				System.out.println("Unidades Disponibles: " + material.getElementsByTagName("UnidadesDisp").item(0).getTextContent());
+				System.out.println("------------------------------------------------------\n");
+			}
+			String[] op = {"Salir", "Regresar"};
+			int x = JOptionPane.showOptionDialog(null, "Material Impreso",
+					"Mediateca",
+					JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, op, op[0]);
+			switch (x) {
+				case 0 -> System.exit(0);
+				case 1 -> Main.main(null);
 			}
 		}catch (Exception e){
 			System.out.println(e.getMessage());
@@ -174,26 +245,48 @@ public class libros extends materialEscrito {
 	}
 
 	@Override
+	public void borrarMaterial() {
+		String id = JOptionPane.showInputDialog(null, "Introduce el ID del Regitro a Eliminar", "Eliminar Material",
+				JOptionPane.QUESTION_MESSAGE);
+		if(id.isEmpty()){
+			JOptionPane.showMessageDialog(null, "NO PUEDEN HABER CAMPOS VACIOS", "ERROR", JOptionPane.ERROR_MESSAGE);
+			borrarMaterial();
+		}else{
+			try {
+				Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");
+				NodeList nl = d.getElementsByTagName("libro");
+				for (int i=0; i<nl.getLength();i++){
+					Element material = (Element) nl.item(i);
+					if(material.getElementsByTagName("CodigoID").item(0).getTextContent().equals(id)){
+						material.getParentNode().removeChild(material);
+					}
+					DOMHelper.saveXMLContent(d,"ejercicio-2/src/mediateca/libros.xml");
+				}
+				String[] op = {"Eliminar Otro", "Salir", "Regresar"};
+				int x = JOptionPane.showOptionDialog(null, "Material Eliminado",
+						"Mediateca",
+						JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, op, op[0]);
+				switch (x) {
+					case 0 -> borrarMaterial();
+					case 1 -> System.exit(0);
+					case 2 -> Main.main(null);
+				}
+			}catch (Exception e){
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+
+	@Override
 	public void buscarMaterial()  {
-		//Variables comunes
-		int op;
-
-		//Inicializamos un Scanner para poder recibir datos desde la consola
-		Scanner reader = new Scanner(System.in);
-
 		//Pedimos el valor a buscar
 		String id = JOptionPane.showInputDialog(null, "Introduce el ID del Regitro a Buscar", "Buscar Material",
 				JOptionPane.QUESTION_MESSAGE);
 		if(id.isEmpty()){
-			System.out.println("----------------------------------------");
-			System.out.println("\t\t**CAMPOS VACIOS**");
-			System.out.println("----------------------------------------");
-			System.out.println("Vuelva a intentarlo");
+			JOptionPane.showMessageDialog(null, "NO PUEDEN HABER CAMPOS VACIOS", "ERROR", JOptionPane.ERROR_MESSAGE);
 			buscarMaterial();
 		}else {
-			//Realizamos un try/cash para poder terminar o arrojar errores si estos suceden antes de interactuar
 			try {
-
 				Document d = DOMHelper.getDocument("ejercicio-2/src/mediateca/libros.xml");//Llamamos a nuestro documento xml con el interactuaremos
 				NodeList nl = d.getElementsByTagName("libro");//Hacemos una lista de los nodos del documento / libros
 
@@ -203,7 +296,6 @@ public class libros extends materialEscrito {
 
 					if(material.getElementsByTagName("CodigoID").item(0).getTextContent().equals(id)){
 						//Si el ID entrante es encontrado lo mostramos
-
 						System.out.println("------------------------------------------------------");
 						System.out.println("Codigo Libro: " + material.getElementsByTagName("CodigoID").item(0).getTextContent());
 						System.out.println("------------------------------------------------------");
@@ -213,41 +305,21 @@ public class libros extends materialEscrito {
 						System.out.println("Editorial: " + material.getElementsByTagName("Editorial").item(0).getTextContent());
 						System.out.println("Unidades Disponibles: " + material.getElementsByTagName("UnidadesDisp").item(0).getTextContent());
 						System.out.println("------------------------------------------------------\n");
-
-					}else {
-						System.out.println("Registro no encontrado");
-						i= nl.getLength();
 					}
 				}
-				System.out.println("------------------------------------------------------\n");
-				System.out.println("[1]Buscar otro\n[2]Regresar\n[0]Salir");
-				System.out.println("------------------------------------------------------");
-				System.out.print("Opcion: ");
-				op = reader.nextInt();
-				switch (op){
-					case 1:
-						buscarMaterial();
-						break;
-					case 2:
-						Main.main(null);
-						break;
-					case 0:
-						System.exit(0);
-						break;
-					default:
-						System.out.println("----------------------------------------");
-						System.out.println("\t\t**DATOS INVALIDOS**");
-						System.out.println("----------------------------------------");
-						System.out.println("Presione Enter...");
-						System.exit(0);
+				String[] op = {"Buscas Otro", "Salir", "Regresar"};
+				int x = JOptionPane.showOptionDialog(null, "Material Encontrado",
+						"Mediateca",
+						JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, op, op[0]);
+				switch (x) {
+					case 0 -> buscarMaterial();
+					case 1 -> System.exit(0);
+					case 2 -> Main.main(null);
 				}
 			}catch (Exception e){
 				System.out.println(e.getMessage());
 			}
 		}
-
-
-
 	}
 
 

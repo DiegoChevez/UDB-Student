@@ -18,85 +18,47 @@ public class Main {
 						"Material Escrito",
 						"Salir"};
 
-		String menu1 = (String) JOptionPane.showInputDialog(null, "Bienvenido\nEscoja un tipo de material",
+		String menu1 = (String) JOptionPane.showInputDialog(null, "\t! BIENVENIDO ¡\n\nSeleccione un Area..",
 				"Mediateca", JOptionPane.INFORMATION_MESSAGE, null, op1, op1[0]);
 
 		switch (menu1) {
 			case "Material Media" -> {
 				Object[] op2 = {"DVDs",
 								"CDs",
-								"Listar Materiales",
 								"Regresar",
 								"Salir"};
 
 				String menu2 = (String) JOptionPane.showInputDialog(null, "Escoja un tipo multimedia",
 						"Mediateca", JOptionPane.INFORMATION_MESSAGE, null, op2, op2[0]);
 
-				if (Objects.equals(menu2, "Listar Materiales")) {
-
-					/*En esta parte imprimimos los articulos del archivo libro.xml*/
-					cds cd = new cds("", "", "", "", "", "", "");
-					cd.listarMaterial();
-
-					/*En esta parte imprimimos los articulos del archivo libro.xml*/
-					dvds dvd = new dvds("", "", "", "", "");
-					dvd.listarMaterial();
-
-				} else if (Objects.equals(menu2, "Regresar")) {
-
-					Main.main(null);
-
-				} else if (Objects.equals(menu2, "Salir")) {
-
-					System.exit(0);
-
-				} else if (Objects.equals(menu2, "DVDs")) {
-
+				if (Objects.equals(menu2, "DVDs")){
 					materialDVDs();
-
-				} else {
-
+				} else if (Objects.equals(menu2, "CDs")) {
 					materialCDs();
-
+				} else if (Objects.equals(menu2, "Regresar")) {
+					Main.main(null);
+				}else{
+					System.exit(0);
 				}
 			}
 			case "Material Escrito" -> {
 
 				Object[] op3 = {"Libros",
 								"Revistas",
-								"Listar Materiales",
 								"Regresar",
 								"Salir"};
 
 				String menu3 = (String) JOptionPane.showInputDialog(null, "Escoja un tipo multimedia",
 						"Mediateca", JOptionPane.INFORMATION_MESSAGE, null, op3, op3[0]);
 
-				if (Objects.equals(menu3, "Listar Materiales")) {
-
-					/*En esta parte imprimimos los articulos del archivo libro.xml*/
-					libros libros = new libros("", "", "", "", "", "", "", "");
-					libros.listarMaterial();
-
-					/*En esta parte imprimimos los articulos del archivo libro.xml*/
-					revista revistas = new revista("", "", "", "", "", "");
-					revistas.listarMaterial();
-
-				} else if (Objects.equals(menu3, "Regresar")) {
-
-					Main.main(null);
-
-				} else if (Objects.equals(menu3, "Salir")) {
-
-					System.exit(0);
-
-				} else if (Objects.equals(menu3, "Revistas")) {
-
-					materialRevistas();
-
-				} else {
-
+				if (Objects.equals(menu3, "Libros")){
 					materialLibros();
-
+				} else if (Objects.equals(menu3, "Revistas")) {
+					materialRevistas();
+				} else if (Objects.equals(menu3, "Regresar")) {
+					Main.main(null);
+				}else{
+					System.exit(0);
 				}
 			}
 			case "Salir" -> System.exit(0);
