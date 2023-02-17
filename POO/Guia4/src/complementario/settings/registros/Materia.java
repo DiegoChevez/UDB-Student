@@ -117,7 +117,7 @@ if(valor == 1) {
 	}
 
 	@Override
-	public void eliminarRegistros() {
+	public void eliminarRegistros() throws SQLException {
 
 		String idS = JOptionPane.showInputDialog(null,"Ingrese el ID de la materia a eliminar");
 		int id = Integer.parseInt(idS);

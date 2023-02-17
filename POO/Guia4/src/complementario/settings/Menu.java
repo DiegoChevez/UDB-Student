@@ -31,25 +31,29 @@ public class Menu {
 	        case "Crear registro":
 	        	
 	        	alumno.crearRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	             	        
 	        case "Listar registros existentes":
 	        
 	        	alumno.mostrarRegistros();
+	        	conexion.closeConnection();
 
 	        	break;
 	        
 	        case "Actualizar registro":
 
 	        	alumno.actualizarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	        	
 	        case "Eliminar registro":
 
 	        	alumno.eliminarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	        	
 	        case "Regresar":
@@ -85,27 +89,31 @@ public class Menu {
 	        case "Crear registro":
 
 	        	materia.crearRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	
 	        	break;
 	             	        
 	        case "Listar registros existentes":
 
 	        	materia.mostrarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	
 	        	break;
 	        
 	        case "Actualizar registro":
 
 	        	materia.actualizarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	        	
 	        case "Eliminar registro":
 
 	        	materia.eliminarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	
 	        	break;
 	        	
@@ -140,25 +148,32 @@ public class Menu {
 	        case "Crear reporte":
 
 	        	reporte.crearRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	             	        
 	        case "Visualizar reporte":
 
 	        	reporte.mostrarRegistros();
-	        	
+	        	conexion.closeConnection();
+
 	        	break;
 	        
 	        case "Actualizar reporte":
 
-	        	JOptionPane.showMessageDialog(null, "Actualizar reporte");
-	        	
+
+	        	reporte.actualizarRegistros();
+	        	conexion.closeConnection();
+
 	        	break;	
 	        	
 	        case "Eliminar reporte":
 	        	
-	        	JOptionPane.showMessageDialog(null, "Eliminar reporte");
 
+	        	reporte.eliminarRegistros();
+	        	conexion.closeConnection();
+
+	        	
 	        	break;
 	        	
 	        case "Regresar":

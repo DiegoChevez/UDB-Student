@@ -83,16 +83,70 @@ public class Reportes extends MetodosCRUD{
 	}
 
 	@Override
-	public void actualizarRegistros() {
+	public void actualizarRegistros() throws SQLException {
+	
 		
+		String idS = JOptionPane.showInputDialog(null,"Ingrese el ID del reporte ");
+		int id = Integer.parseInt(idS);
 		
+		int idM = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el ID de la materia"));
+		
+		int idA = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el ID del alumno"));
+
+		
+		String consulta = "SELECT `Cod_alumno`, `Nombre` FROM `alumno` WHERE `Cod_alumno` = '"+id+"'"; 
+		try {
+			Conexion connection = new Conexion();
+			
+			try {
+				Connection con = connection.getConnection();
+				ps = con.prepareStatement(consulta);
+				
+				String consultaReporte = "UPDATE `alumno_materia` SET `Cod_alumno`='"+ idA +"',`Cod_materia`='"+ idM +"' WHERE `Cod_Reporte` = '"+ id +"'";
+				ps = con.prepareStatement(consultaReporte);
+				JOptionPane.showMessageDialog(null, "Registrado exitosamente");
+				ps.executeUpdate();
+
+				
+			}catch(SQLException e) {
+				e.printStackTrace();
+
+			}
+			
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		
 	}
 
 	@Override
-	public void eliminarRegistros() {
+	public void eliminarRegistros() throws SQLException {
 		
 		
+		String idS = JOptionPane.showInputDialog(null,"Ingrese el ID de la materia a eliminar");
+        int id = Integer.parseInt(idS);
+
+        try {
+            Connection conexion = DriverManager.getConnection ("jdbc:mysql://localhost/escuela","root", "");
+            Statement s = conexion.createStatement();
+
+            int valor = s.executeUpdate("DELETE FROM alumno_materia where Cod_Reporte= '" +id+"'");
+
+            if(valor == 1) {
+
+                JOptionPane.showMessageDialog(null, "Materia eliminada correctamente");
+
+            }else {
+                JOptionPane.showMessageDialog(null, "Esta materia no existe en los registros");
+
+            }
+            conexion.close();
+
+        }catch(SQLException e) {
+
+            e.printStackTrace();
+
+        }
 		
 		
 	}
