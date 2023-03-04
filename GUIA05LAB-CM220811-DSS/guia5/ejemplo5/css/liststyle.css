@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    outline: none;
+}
+
+body {
+    font-size: 16px;
+}
+
+.bg-cyan {
+    background-image: url("../img/bg-purple.jpg");
+}
+
+/* Contenedor del formulario */
+.form-style {
+    background: #FFF;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    margin:40px auto;
+    padding:24px;
+    width:480px;
+}
+
+.form-style h1 {
+    background: #2A88AD;
+    border: 1px solid #257C9E;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    color: #fff;
+    font: normal 30px 'Bitter', serif;
+    margin: -30px -30px 20px -30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    padding: 20px 30px 15px 30px;
+}
+
+/* Estilos para listas numeradas con círculos */
+.numberlist {
+    width:480px;
+}
+
+.numberlist ol{
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'Trebuchet MS','Lucida Sans';
+    padding: 0;
+    margin-bottom: 4em;
+}
+
+.numberlist ol ol{
+    margin: 0 0 0 2em;
+}
+            
+.numberlist a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #87ceeb;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;
+    border-radius: .3em;
+}
+
+.numberlist a:hover{
+    background: #cbe7f8;
+    color: #333;
+    text-decoration: none;
+}
+
+.numberlist a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+    color:#FFF;
+}
