@@ -1,0 +1,4 @@
+
+Estamos en la clase de archivos de la materia Desarrollo de Aplicaciones Web con Software Interpretado en el Servidor.
+
+Estamos viendo un ejemplo del uso de archivos en PHP.
