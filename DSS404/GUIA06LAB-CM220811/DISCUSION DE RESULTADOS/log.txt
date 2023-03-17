@@ -1,0 +1,3 @@
+El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-17 06:48:13 desde la ip: ::1,
+El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-17 06:48:14 desde la ip: ::1,
+El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-17 06:48:14 desde la ip: ::1,
