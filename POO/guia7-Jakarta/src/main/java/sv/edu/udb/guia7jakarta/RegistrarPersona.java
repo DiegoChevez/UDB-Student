@@ -35,7 +35,7 @@ public class RegistrarPersona extends HttpServlet {
                         "VALUES ('" + nombre + "'," + edad + ", '" + sexo + "' , " + idocupacion + ", '" + fecha + "' ,'" + usuario + "', '" + password + "' )";
                 Conexion con = new Conexion();
                 con.setQuery(query);
-                String query2 = "SELECT ocupacion FROM ocupaciones WHERE id_ocupacion =" + idocupacion;
+                String query2 = "SELECT Rol FROM roles WHERE Id_Rol =" + idocupacion;
                 con.setRs(query2);
                 ResultSet rs = con.getRs();
                 rs.next();

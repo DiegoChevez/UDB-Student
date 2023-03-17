@@ -12,7 +12,7 @@ public class Conexion {
 //obtenemos el driver de para mysql
             Class.forName("com.mysql.cj.jdbc.Driver");
 // Se obtiene una conexión con la base de datos. 2
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/personabddg7", "root", "");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost/telecomunicacionessv", "root", "");
 // Permite ejecutar sentencias SQL sin parámetros
             s = conexion.createStatement();
         } catch (ClassNotFoundException e1) {
@@ -26,12 +26,13 @@ public class Conexion {
     }
     //Metodo que permite fijar la tabla resultado de la pregunta
 //SQL realizada
-    public void setRs(String consulta) {
+    public String setRs(String consulta) {
         try {
             this.rs = s.executeQuery(consulta);
         } catch (SQLException e2) {
             System.out.println("ERROR:Fallo en SQL: " + e2.getMessage());
         }
+        return consulta;
     }
     //Metodo que recibe un sql como parametro que sea un update,insert.delete
     public void setQuery(String query) throws SQLException {
