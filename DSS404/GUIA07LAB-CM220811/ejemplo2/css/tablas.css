@@ -1,0 +1,128 @@
+/***********************************************************
+* Estilos para la tabla principal de resultados paginados  *
+***********************************************************/
+
+.tablaps                   {
+    background-color:rgb(240,245,255);
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size:12px;
+    margin:0 auto;
+    width: 80%;
+}
+
+.tablaps caption           {
+    color:#881100;
+    font-family:Arial,Verdana,Helvetica,sans-serif;
+    font-weight:bold;
+    font-size:12pt;
+}
+
+.tablaps th                {
+    background-color: #83AEC0;
+    /* Old browsers */
+    background: #a7c7dc; 
+    /* FF3.6-15 */
+    background: -moz-linear-gradient(top, #a7c7dc 0%, #85b2d3 100%); 
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(top, #a7c7dc 0%,#85b2d3 100%); 
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to bottom, #a7c7dc 0%,#85b2d3 100%); 
+    /* IE8, IE7 and down */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0);
+    background-repeat: repeat-x;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #558FA6;
+    border-bottom-color: #558FA6;
+    color: #FFFFFF;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 12px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+
+.tablaps .numeral          {
+    vertical-align:top;
+ }
+
+.tablaps .impar            {
+    background-color: #E2EBEF;
+    background-repeat: repeat-x;
+    color: #34484E;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 12px;
+    font-weight:normal;
+}
+
+.tablaps .impar td         {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #A4C4D0;
+    border-bottom-color: #A4C4D0;
+    padding: 5px;
+    text-align:left;
+}
+
+.tablaps thead tr th:nth-child(3) {
+    width: 40%;
+}
+
+.tablaps .par              {
+    background-color: #EBF2FF;
+    background-repeat: repeat-x;
+    color: #24283E;
+    font-size: 12px;
+    font-weight:bold;
+    font-family: "Trebuchet MS", Arial;
+    text-align:left;
+}
+
+.tablaps .par td           {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #EBE9BC;
+    border-bottom-color: #EBE9BC;
+    padding: 5px;
+}
+
+.tablaps thead tr th:nth-child(3) {
+    width: 40%;
+}
+
+.tablaps .impar td a:link  {
+    color:#465686;
+    text-decoration:none;
+}
+
+.tablaps .par td a:link    {
+    color:#465686;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.tablaps .impar td a:visited {
+    color:#667799;
+    text-decoration:none;
+}
+
+.tablaps .par td a:visited   {
+    color:#667799;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.tablaps .impar td a:hover   {
+    color:#2636B6;
+    text-decoration:underline;
+}
+.tablaps .par td a:hover       {
+    color:#2636B6;
+    font-weight:bold;
+    text-decoration:underline;
+}

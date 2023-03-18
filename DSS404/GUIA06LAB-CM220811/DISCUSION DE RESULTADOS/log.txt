@@ -2,3 +2,13 @@ El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecu
 El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-17 06:48:14 desde la ip: ::1,
 El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-17 06:48:14 desde la ip: ::1,
 El script /DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-18 06:13:51 desde la ip: ::1,
+El script /UDB-STUDENT/DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-18 14:15:44 desde la ip: ::1,
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+Guardando la ip : 172.217.3.68y la ip : 172.67.211.76
+El script /UDB-STUDENT/DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-18 14:38:20 desde la ip: ::1,
+El script /UDB-STUDENT/DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-18 14:38:23 desde la ip: ::1,
+El script /UDB-STUDENT/DSS404/GUIA06LAB-CM220811/DISCUSION DE RESULTADOS/random.php se ejecuto a las 2023-03-18 16:04:18 desde la ip: ::1,

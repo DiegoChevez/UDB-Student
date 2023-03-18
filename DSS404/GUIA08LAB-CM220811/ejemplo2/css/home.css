@@ -1,0 +1,153 @@
+/* Importar la fuente Oswald de Google */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+h1           {
+   color:#FFF8DC; 
+   font-size:24pt; 
+   text-align:center;
+   font-family:arial,sans-serif;
+}
+
+#mainmenu    {
+   background:#303090;
+   float: left;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+#mainmenu li {
+   border: 3px solid rgb(173, 178, 185);
+   float: left;
+   line-height: 2.25em;
+   margin-left: 20px;
+   padding: 0 0.3em;
+}
+
+#mainmenu a  {
+   display: block;
+   float: left;
+   font: Bold 1em 'Oswald';
+   line-height: 2.25em;
+   padding: 0 0.3em;
+   text-decoration: none;
+}
+
+#mainmenu a img {
+    padding: 0.5em 0 0 0;
+}
+
+.menu        {
+   color: #FFF8DC;
+   font-family: 'Oswald';
+   font-size: 12pt;
+   font-weight: bold;
+   text-align: center;
+}
+
+td           {
+   background:#303090;
+}
+
+p            {
+   color:black; 
+   font-size:12pt; 
+   text-align:justify;
+   font-family:arial,sans-serif
+}
+
+p.foot       {
+   color:white; 
+   font-size:9pt; 
+   font-family:arial,sans-serif; 
+   font-weight:bold;
+   text-align:center;
+}
+
+#paragraph h4{
+   margin: 8px 12px;
+}
+
+#paragraph p {
+   margin: 6px 12px;
+}
+
+a:link, 
+a:visited, 
+a:active     {
+   color:#fff;
+}
+
+a:hover {
+   color:#fff;
+}
+
+/* Estilos para la caja de contenidos superior ubicada debajo del menú principal */
+#topcontent                            {
+	height:290px;
+   top:5px;
+   width:100%;
+}
+
+#topcontent #textbox                   {
+   background-color:rgb(220,221,223);
+	float:left;
+   height:370px;
+	left:12px;
+	margin:0;
+   top:10px;
+   width:398px;
+}
+
+/* Estilos para el título de la caja de texto */
+#topcontent #textbox #title             {
+   background-color:rgb(148,150,158);
+   height:28px;
+   text-align:center;
+   width:100%;
+}
+
+#topcontent #textbox h2                 {
+   color:White;
+   font:Normal 900 1.1em Verdana,Helvetica,sans-serif;
+   padding:5px 20px;
+}
+
+/* Estilos para el área de los párrafos de la caja de texto */
+#topcontent #textbox #paragraph         {
+   font:Normal 1.1em Verdana,Helvetica,sans-serif;
+   height:250px;
+   width:100%;
+}
+
+#topcontent #textbox #paragraph p       {
+   padding:10px 20px;
+   font:Normal 500 1em Calibri,Arial,Helvetica,sans-serif;
+   text-align:center;
+}
+
+
+/* Estilos para la región que muestra la imagen de portada en la caja de contenidos superior 
+*/
+#topcontent #picture                    {
+	float:right;
+	top:0;
+	width:800px;
+	height:275px;
+	background-color:White;
+	margin:0;
+   /* border:1px solid Red; */
+}
+
+#footer                                 {
+   width: 100%;
+   clear: both;
+}
+
+section                                 {
+   position: relative;
+   left: 50%;
+   margin-left: -45%;
+   width: 90%;
+}

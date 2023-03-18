@@ -3,13 +3,13 @@ $ip_address = $_SERVER['REMOTE_ADDR'];
 $nombre_script = $_SERVER['PHP_SELF'];
 $hora_actual = date('Y-m-d H:i:s');
 $text = "El script ". $nombre_script." se ejecuto a las ". $hora_actual . " desde la ip: ". $ip_address . ",";
-escritura($text);
+escritura($text); 
 
 
 /* $ip_addressG = gethostbyname("www.google.com");
 $ip_addressJ = gethostbyname("www.javatpoint.com");
 $text2 = "Guardando la ip : ". $ip_addressG . "y la ip : " . $ip_addressJ;
-escritura($text2); */
+escritura($text2);  */
 
 
 
