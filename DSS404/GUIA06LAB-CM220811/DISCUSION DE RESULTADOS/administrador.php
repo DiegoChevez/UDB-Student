@@ -6,11 +6,15 @@ if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
   $ip_address = $_SERVER['REMOTE_ADDR'];
 }
 
-echo "La dirección IP completa desde la cual se accedió al archivo es: " . $ip_address;
-
-
-
+if(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARTDED_FOR'] != '') {
+ echo $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+  echo $ip_address = $_SERVER['REMOTE_ADDR'];
+}   
 ?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>

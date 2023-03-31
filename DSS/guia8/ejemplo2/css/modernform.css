@@ -1,0 +1,409 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFFFF;
+    color: #fff;
+    font-family: 'Lato',Arial,sans-serif; 
+    text-align: left;
+}
+
+header {
+    border-bottom: 1px solid #EDEFF0;
+    color: #009EE0;
+    font-family: 'Lato',Arial,sans-serif;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    color:#2d2b2c;
+    font-size: 2.625em;
+    font-weight: 300;
+    line-height: 1.3;
+    line-height:100px;
+    margin: 0;
+}
+
+small {
+    bottom: 25px;
+    color: #EF0C72;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.container {
+    float: left;
+    height: 481px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+section {
+    position: relative;
+    height: 442px;
+    margin-left: 50%;
+    left: -197px;
+    width: 394px;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), 
+       url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), 
+       url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), 
+       url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Anulando estilos de campos de formulario cuando se obtenga el foco */
+:focus {outline:none}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor:pointer;
+}
+
+.fa:hover{
+    -moz-transform:scale(1.2); /* Firefox */
+    -ms-transform:scale(1.2); /* IE 9 */
+    -o-transform:scale(1.2); /* Opera */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    transform:scale(1.2);
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  
+}
+
+/* makes the font 33% larger relative to the icon container */
+.fa-2x {
+    font-size: 20px;
+    line-height:40px;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-user:before {
+  content: "\f007";
+}  
+.fa-envelope:before {
+  content: "\f007";
+}
+.fa-lock:before {
+  content: "\f113";
+}
+.fa-facebook:before {
+  content: "\f02e";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-degree:before {
+  content: "\f084";
+}
+
+.tabs h1 {
+    font-size: 32px;
+    font-family: 'Roboto';
+    margin-bottom:15px;
+  
+} 
+.tabs p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+/* Each Tab CSS to make Radio button Work*/
+/* Blue Color Tab - If you want to used blue tab, just used following css*/
+
+/******************** START ********************/
+.tabs.blue {
+    float: left;
+    list-style: none;
+    position: relative;
+    text-align: left;
+    width: 394px;
+}
+
+.tabs.blue li {
+    float: right;
+    display: block;
+}
+
+.tabs.blue input[type="radio"] {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+.tabs.blue label {
+    display: block;
+    padding: 14px 31px;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs.blue .tab-content {
+  z-index: 2;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 15px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+}
+
+.tabs.blue [id^="tab"]:checked + label {
+    padding-top: 17px;
+    top: 5px;
+  
+}
+
+.tabs.blue [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+}
+
+/* TAB COLOR SCHEME FOR BLUE */
+.tabblue .tabs label {
+    background: #16b3f5;
+}
+
+.tabblue .fa:hover{
+    color:#009EE0;
+}
+
+.tabblue .tabs label:hover {
+    background: #009EE0;
+}
+
+.tabblue .tabs .tab-content {
+    background: #009EE0;
+}
+
+.tabblue .tabs [id^="tab"]:checked + label {
+    background: #009EE0;
+}
+
+.tabblue .tabs input[type="submit"] {
+    background:#3a57af;
+    color: #f0f3f6;
+}
+
+.tabblue .tabs input[type="submit"]:hover {
+    background:#c4f1fe;
+    color: #060930;
+}
+
+.tabblue .tabaddon {
+    color: #16B3F5;
+}
+
+/******************** END ********************/
+
+/* TAB Form */
+.tabs input[type="text"], 
+.tabs input[type="number"], 
+.tabs input[type="date"],
+.tabs input[type="password"], 
+.tabs input[type="email"], 
+.tabs select {
+    border: medium none;
+    color: #757575;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 89%;
+}
+
+/* Estilos para los input type=radio del género */
+.tabs .accounttype input[type="radio"] {
+    visibility: hidden;
+}
+
+.tabs .accounttype label.radio {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 15px;
+    overflow: visible;
+    position: relative;
+    text-indent: 20px;
+}
+
+.tabs .accounttype label.radio:before {
+    background: #778899;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 10%;
+    content:'';
+    position: absolute;
+    top: 16px;
+    left: 6px;
+    height: 20px;
+    width: 20px;
+}
+
+.tabs .accounttype label.radio:after {
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    content: '';
+    height: 0.25em;
+    left: 10px;
+    opacity: 0;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 22px;
+    width: 0.5em;
+}
+
+.tabs .accounttype input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+/* Estilos del elemento select de carrera */
+.tabs select {
+    float:left;
+    width: 89%; 
+}
+
+.tabs select.last {
+    margin-right:0px;
+}
+
+.tabs .btn {
+    float: left;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.tabs .btn em{
+    font-size:12px;
+}
+
+.tabs input[type="submit"]{
+    display:block;
+    float:right;
+    cursor:pointer;
+    border-top: 2px solid #a3ceda;
+    border-left: 2px solid #a3ceda;
+    border-right: 2px solid #4f6267;
+    border-bottom: 2px solid #4f6267;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    background-color: #c4f1fe;
+    font-weight: bold;
+    color: #2d525d;
+    text-decoration:none;
+}
+
+.tabs input[type="submit"]:hover{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.tabs h4{
+    font-style:italic;
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:normal; 
+}
+
+.tabaddon {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-right: 1px solid #ebebeb;
+    float: left;
+    height: 40px;
+    text-align: center;
+    width: 40px;
+}
+
+.tabs .social {
+    float:left;
+    margin-bottom:10px;
+    width:100%;
+}
+.tabs .social a {
+    color:#FFF;
+    float:left;
+    font-size:14px;
+    padding: 10px 65px 10px 30px; 
+    text-decoration:none;
+}
+
+.tabs .social .fa{
+    margin-right:25px;
+}
+
+.tabs .social .facebook{
+    background: none repeat scroll 0 0 #3B5998; 
+}
+
+.tabs .social .facebook:hover{
+    background:#3e5fa4;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.tabs .social .twitter{
+    background: none repeat scroll 0 0 #16B3F5;
+}
+
+.tabs .social .twitter:hover{
+    background:#34bbf4;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
