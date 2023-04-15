@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-size: 15px;
+}
+
+body {
+    background: rgb(220,225,230) url(../img/redwall.gif) repeat-x fixed;
+    margin-top: 100px;
+}
+     
+h1 {
+    color: MidnightBlue;
+    font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    font-size: 3.5em;
+    letter-spacing: 1.25px;
+    margin-bottom: 0.25em;
+    text-align: center;
+    text-shadow: 1px 1px white, 
+                -1px -1px #444
+}
+
+article {
+    height: auto;
+    margin: 0.6em auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+h2 {
+    color: DarkSlateBlue;
+    font-family: Eurostile,Verdana,Helvetica;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-shadow: 1px 1px white, 
+                -1px -1px #444
+}
+
+p {
+    color: Brown;
+    font-family: Georgia;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-top: 0.6em;
+}

@@ -1,0 +1,21 @@
+@font-face { 
+    font-family: 'LeagueGothic'; 
+    src: url('../fonts/League_Gothic.eot'); 
+    src: url('../fonts/League_Gothic.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/League_Gothic.woff') format('woff'), 
+         url('../fonts/League_Gothic.ttf') format('truetype'), 
+         url('../fonts/League_Gothic.svg#LeagueGothic') format('svg'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face{
+    font-family: 'WebSymbolsRegular';
+    src: url('../fonts/websymbols-regular-webfont.eot');
+    src: url('../fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/websymbols-regular-webfont.woff') format('woff'),
+        url('../fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

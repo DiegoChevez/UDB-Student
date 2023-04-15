@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+form h2 {
+    color: #333;
+    font: 700 1.75em 'Oswald',Arial,Helvetica,"Leberation Sans";
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.file-upload input.upload {
+    position: absolute;
+    top: 0;
+    right: 100000px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;   
+}
+
+h3.title {
+    color: #68B;
+    font: 700 2em 'Oswald',Tahoma,Helvetica,"Liberation Sans";
+}

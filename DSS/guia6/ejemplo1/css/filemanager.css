@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Cantarell);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    /* Old browsers */
+    background: #f2f6f8;
+    /* FF3.6+ */
+    background: -moz-linear-gradient(45deg, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+    /* Chrome,Safari4+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f2f6f8), color-stop(50%,#d8e1e7), color-stop(51%,#b5c6d0), color-stop(100%,#e0eff9));
+    /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(45deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(45deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 
+100%);
+    /* IE10+ */
+    background: -ms-linear-gradient(45deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 
+100%);
+    /* W3C */
+    background: linear-gradient(45deg, #f2f6f8 0%,#d8e1e7 50%,#b5c6d0 51%,#e0eff9 100%);
+    /* IE6-9 fallback on horizontal gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', 
+endColorstr='#e0eff9',GradientType=1);
+    height: 100%;
+}
+
+header h1 {
+    background:#39F;
+    color: #EF4507;
+    font: Bold 3em 'Oswald';
+    text-align: center;
+    text-shadow: 1px 1px #00c6ff,
+                 0 0 #00b4ff,
+                 -1px -1px #00adee;
+    width: 100%;
+}
+
+#manager {
+	font: normal 1em 'Cantarell';
+	color: #38E;
+}
+
+table caption {
+    font: Bold 1.2em 'Oswald';
+    color: #EF4507;
+    text-shadow: 0px -1px 0px rgba(125,125,125,.75);
+}

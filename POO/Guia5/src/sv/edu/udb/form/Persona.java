@@ -125,6 +125,10 @@ public class Persona extends JFrame {
                 tblObtenerDato(e);
             }
         });
+        btnObtenerDatos.addMouseListener(new MouseAdapter() {
+        });
+        btnObtenerDatos.addMouseListener(new MouseAdapter() {
+        });
     }
         // ? Pasar datos seleccionados a sus respectivos campos JTextField
     private void tblObtenerDato(MouseEvent e) {

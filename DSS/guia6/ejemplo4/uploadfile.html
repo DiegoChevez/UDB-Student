@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="utf-8" />
+ <title>Subir múltiples archivos</title>
+ <link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="css/upload.css" />
+ <script src="js/upload.js"></script>
+</head>
+<body>
+<section>
+ <article>
+ <form name="formu" id="formu" action="upload.php" method="POST" 
+enctype="multipart/form-data">
+ <dl> 
+ <dt>
+ <h2>Archivos a Subir:</h2>
+ </dt>
+ <!-- Este div contendrá todos los campos file que creemos -->
+ <dd>
+ <div id="conteGeneral">
+ <div class="contenedor"> 
+ <input type="text" id="uploadFile0" placeholder="Seleccionar archivo" 
+disabled="disabled" />
+ <div id="adjuntos" class="file-upload btn ">
+ <!-- Hay que prestar atención a esto, el nombre 
+ de este campo siempre debe terminar en [] como 
+un vector, y además debe coincidir con el nombre 
+que se da a los campos nuevos en el script js -->
+ <span class="btn btn-primary span" id="spanadj">Adjunto</span>
+<input type="file" name="archivos[]" id="uploadBtn0" class="upload" 
+/><br/>
+ </div>
+ </div>
+ </div>
+ </dd>
+ <dt>
+ <a href="javascript:void(0);" id="addfieldlink">Subir otro archivo</a>
+ </dt>
+ <dd>
+ <input type="submit" value="Enviar" id="envia" name="envia" class="btn btndefault" />
+ </dd>
+ </dl>
+ </form>
+ </article>
+</section>
+</body>
+</html>
