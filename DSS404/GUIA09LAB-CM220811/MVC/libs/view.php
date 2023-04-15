@@ -1,9 +1,9 @@
 <?php
 class View{
  function __construct(){
- echo "<p>soy la vista base</p>";
+ 
  }
- function renderView($vista){
- require 'views/' . $vista;
+ function renderView($vista){//Notara que nunca hacemos un redirect puntual a una vista
+ require 'views/' . $vista; // Entonces llamamos ese codigo y añadimos el recurso vista
  }
 }
